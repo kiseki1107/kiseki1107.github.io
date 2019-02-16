@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags ------------------------------------------------------------------------------------------------->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap 4.2.1 CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <!-- Optional JavaScript: jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- All of these are provided by Bootstrap 4's starter template and is necessary to get some of the above codes to function properly. -->
+        <!-- EX: the navbar's dropdown menu does not work without the additional JavaScript listed below -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <title>WeatherPy Visualizations</title>
+    </head>
+    <body>
+        <!-- Creating the navbar ------------------------------------------------------------------------------------------------>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="index.html" style="color:white;">Latitude</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <!-- ml-auto is needed to shift the navbar links to the right -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- dropdown navbar -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Plots</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="max_temp.html">Max Temperature</a>
+                            <a class="dropdown-item" href="humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="comparison.html">Comparison</a></li>
+                    <li class="nav-item"><a class="nav-link" href="data.html">Data</a></li>
+                </ul>
+            </div>
+        </nav> <!-- End of navbar -->
+
+
+
+        <!-- Creating the body texts using Bootstrap 4's card format ------------------------------------------------------------> 
+        <!-- Box up the container to create a border-like look for the body texts -->
+        <div class="container-fluid" style="padding:50px; margin-bottom:50px">   
+            <div class="row">
+                <!-- Summary column-->
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="card-body" style="padding:50px">
+                            <h1 class="card-title">Summary: Latitude vs. X</h1>
+                            <hr>
+                            <img src="./Resources/assets/images/max_temp.png" alt="City Latitude vs. Max Temperature" style="float:left;width:30%;height:50%;">
+                            <p class="card-text" style="line-height:2.0">
+                                The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                            </p>
+                            <br>
+                            <p class="card-text" style="line-height:2.0">
+                                After assembling the dataset, we use Matplotlib to plot various aspects of the weather vs. latitutide. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+                            </p>
+                        </div> <!-- End of card-body class -->
+                    </div> <!-- End of card class -->
+                </div> <!-- End of 1st column -->
+
+
+
+                <!-- Visualization column -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Visualizations</h1>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="max_temp.html">
+                                    <img class = "img-responsive" src="./Resources/assets/images/max_temp.png" style="width:100%" alt="City Latitude vs. Max Temperature"></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="humidity.html">
+                                    <img class = "img-responsive" src="./Resources/assets/images/humidity.png" style="width:100%" alt="City Latitude vs. Humidity"></a>
+                                </div>
+                            </div> <!-- End of 1st visual row -->
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="cloudiness.html">
+                                    <img class = "img-responsive" src="./Resources/assets/images/cloudiness.png" style="width:100%" alt="City Latitude vs.Cloudiness"></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><a href="wind_speed.html">
+                                    <img class = "img-responsive" src="./Resources/assets/images/wind_speed.png" style="width:100%" alt="City Latitude vs. Wind Speed"></a>
+                                </div>
+                            </div> <!-- End of 2nd visual row -->     
+                        </div> <!-- End of card-body class -->
+                    </div> <!-- End of card class -->
+                </div> <!-- End of 2nd column-->
+            </div> <!-- End of row -->
+        </div> <!-- End of container -->
+
+
+
+        <!-- Create the footer ---------------------------------------------------------------------------------------------->
+        <footer>Clarence Li & © Copyright Data Science Bootcamp 2018-2019</footer>
+     </body>
+</html>

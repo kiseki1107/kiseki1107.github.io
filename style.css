@@ -1,0 +1,42 @@
+body {
+    background-color: lightgray;
+}
+    /* "." replaces "class" in CSS */
+    .navbar-brand {
+        background-color:teal;
+        /* navbar-brand font color does not work here */
+        color:white;
+        font-weight:bold;
+        margin-left:50px;
+        padding:10px;
+    }
+    .nav-item {
+        margin-left:20px;
+    }
+    h1 {
+        color: teal;
+        font-weight: bold;
+        padding:20px;
+    }
+    h3 {
+        color: teal;
+        font-weight: bold;
+        text-align: center;   
+    }
+    #weather_data {
+        border-collapse: collapse;
+        width: 100%;
+        float: center;
+    }
+    footer {
+        /* Unable to keep footer at the bottom for long pages */
+        /* fixed position allows for the footer to stay at the bottom, however, with the scrolling. */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(48, 48, 48);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-top: 10px solid teal;
+    }
